@@ -9,6 +9,7 @@ ctrl_surfaces_b = [dR;dP;dY];
 U = 185.038755;  % mach*speed_of_sound = 0.55*336.4341
 V = 10.0;
 W = 16.18879338;
+
 V_b = sqrt(U^2+V^2+W^2);
 
 % PQR
@@ -114,7 +115,6 @@ CN_DEL_Y = interp1(Tbl_MACH, Tbl_CN_DEL_Y, mach_number);
 CN_a = CN_PHIT*sin(4*roll_angle_T) + CN_R*D_2V*R_a + CN_DEL_Y*dY_a + CY_a*geo_param;
 
 aero_coefficients = [CX_a CY_a CZ_a CL_a CM_a CN_a];
-
 
 
 
