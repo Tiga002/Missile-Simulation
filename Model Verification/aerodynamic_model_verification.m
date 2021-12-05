@@ -1,3 +1,6 @@
+%.. Load Sim Parameters and Missile Data
+    Missile_Data;
+
 %.. Input Parameters
 % Controls
 dR = 0.0 * pi/180.0;
@@ -114,7 +117,7 @@ CN_DEL_Y = interp1(Tbl_MACH, Tbl_CN_DEL_Y, mach_number);
 
 CN_a = CN_PHIT*sin(4*roll_angle_T) + CN_R*D_2V*R_a + CN_DEL_Y*dY_a + CY_a*geo_param;
 
-aero_coefficients = [CX_a CY_a CZ_a CL_a CM_a CN_a];
+aero_coefficients = [CX_a CY_a CZ_a CL_a CM_a CN_a]
 
 
 
