@@ -25,7 +25,7 @@
     
 %.. Initial Conditions (you can change these values as you want)
 
-    Init_Pos            =       [ 0.0, 0.0, -1000.0 ] ;                         % Xe, Ye, Ze            (m)
+    Init_Pos            =       [ 0.0, 0.0, 0.0 ] ;                         % Xe, Ye, Ze            (m)
     Init_Vel            =       [ 238.0, 0.0, 0.0 ] ; 
     Init_Euler          =       [ 0.0, 0.0, 0.0 ] * UNIT_DEG2RAD ; 
     Init_Rate           =       [ 0.0, 0.0, 0.0 ] * UNIT_DEG2RAD ; 

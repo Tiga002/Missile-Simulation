@@ -21,6 +21,7 @@
     global      Tbl_CM_0        Tbl_CM_PHIT     Tbl_CM_Q        Tbl_CM_DEL_P
     global      Tbl_CN_PHIT     Tbl_CN_R        Tbl_CN_DEL_Y
     
+    global      Tbl_ALT         Tbl_SOS
     global      Wn_Act          Zeta_Act
     
     global      K_phi           K_p             
@@ -141,4 +142,9 @@
     Tbl_CN_R        =   [ -82.9643  -47.4409  -32.7732  -16.7304  -43.2010  -56.1499 ] ;        % Size: 1x6 (1 x Mach), Unit: (1/rad)  
     
     Tbl_CN_DEL_Y    =   [ -0.3616   -0.3938   -0.4120   -0.4322   -0.4560   -0.5160 ] ;         % Size: 1x6 (1 x Mach), Unit: (1/rad)
+
+%.. Environment Data (depends on altitide [m])
+    Tbl_ALT = [0.0  10000  20000  30000  40000];
+    Tbl_SOS = [340.268  336.408  332.504  328.553  324.554];
+
     
