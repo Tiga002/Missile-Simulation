@@ -1,8 +1,7 @@
-function log_trim_conditions(log_file_name, x_trim, u_trim, y_trim, mach_trim, h_trim)
+function log_trim_conditions_iterative(fileID, x_trim, u_trim, y_trim, mach_trim, h_trim)
 
 UNIT_RAD2DEG = 180 / pi ;                              	                    % Radian to Degree
 
-fileID = fopen(log_file_name, 'w');
 fprintf(fileID, '===========================================');
 fprintf(fileID, '           Trim Flight Conditions          ');
 fprintf(fileID, '===========================================');
