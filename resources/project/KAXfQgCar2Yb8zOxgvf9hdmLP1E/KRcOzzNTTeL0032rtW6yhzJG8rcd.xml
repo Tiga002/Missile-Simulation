@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info Type="StartUp" Visible="0" Icon="" File="Missile_Data.m" Name="Missile_Data">
+<Info Type="StartUp" Visible="0" Icon="" File="Modelling/Missile_Data.m" Name="Missile_Data">
     <Extension Value="62ad46cc-8378-4ec8-abfa-4362f1572c13" Name="StartUpPrev" />
 </Info>
