@@ -21,9 +21,9 @@ fprintf(fileID, ' W      = %3.4f m/s   \n ', x_trim(3));
 fprintf(fileID, ' P      = %3.4f deg/s \n ', x_trim(4) * UNIT_RAD2DEG);
 fprintf(fileID, ' R      = %3.4f deg/s \n ', x_trim(5) * UNIT_RAD2DEG);
 fprintf(fileID, ' Q      = %3.4f deg/s \n ', x_trim(6) * UNIT_RAD2DEG);
-fprintf(fileID, ' PHI    = %3.4f deg/s \n ', x_trim(7) * UNIT_RAD2DEG);
-fprintf(fileID, ' THETA    = %3.4f deg/s \n ', x_trim(8) * UNIT_RAD2DEG);
-fprintf(fileID, ' PSI    = %3.4f deg/s \n ', x_trim(9) * UNIT_RAD2DEG);
+fprintf(fileID, ' PHI    = %3.4f deg   \n ', x_trim(7) * UNIT_RAD2DEG);
+fprintf(fileID, ' THETA    = %3.4f deg \n ', x_trim(8) * UNIT_RAD2DEG);
+fprintf(fileID, ' PSI    = %3.4f deg   \n ', x_trim(9) * UNIT_RAD2DEG);
 fprintf(fileID, ' ALPHA    = %3.4f deg \n ', y_trim(10) * UNIT_RAD2DEG);
 fprintf(fileID, ' BETA    = %3.4f deg \n ', y_trim(11) * UNIT_RAD2DEG);
 fprintf(fileID, ' V_air_speed    = %3.4f m/s \n ', y_trim(12));
@@ -34,4 +34,5 @@ fprintf(fileID,'Thrust  = %3.4f N \n ', u_trim(1));
 fprintf(fileID,'Elevator = %3.4f N \n ', u_trim(2) * UNIT_RAD2DEG);
 fprintf(fileID,'Aileron  = %3.4f N \n ', u_trim(3) * UNIT_RAD2DEG);
 fprintf(fileID,'Rudder  = %3.4f N \n ', u_trim(4) * UNIT_RAD2DEG);
+fprintf(fileID, '\n');
 end
