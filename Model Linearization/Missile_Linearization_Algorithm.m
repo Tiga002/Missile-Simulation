@@ -115,4 +115,4 @@ C_lat
 D_lat
 
 
-save( 'Missile_Linear_Model.mat', 'A_lon', 'B_lon', 'C_lon', 'D_lon', 'A_lat', 'B_lat', 'C_lat', 'D_lat') ;
+save( 'Missile_Linear_Model_CG_Backward.mat', 'A_lon', 'B_lon', 'C_lon', 'D_lon', 'A_lat', 'B_lat', 'C_lat', 'D_lat') ;

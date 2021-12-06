@@ -1,6 +1,7 @@
 %% Loading of the linearized Model
-
-load Missile_Linear_Model.mat;
+clc;
+clear;
+load Missile_Linear_Model_CG_Backward.mat;
 
 %% Stability Analysis of Longitudinal Dynamics
 
@@ -21,7 +22,7 @@ damp(longitudinal_sys)
 
 %computing of eigenvalues
 eigenvalues_lateral_dynamics = eig(A_lat)
-lateral_sys = ss(A_lat, B_lat, C_lat, D_lat)
+lateral_sys = ss(A_lat, B_lat, C_lat, D_lat);
 figure(2)
 pzmap(lateral_sys)
 title('Pole Locations of Lateral Dynamics')

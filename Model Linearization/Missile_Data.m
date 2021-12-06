@@ -45,7 +45,7 @@
                        0.0,  0.0, I_zz ] ; 
     
     
-    XCG         =   0.809 ;                                                 % Missile C.G. Point 
+    XCG         =   0.809*1.1 ;                                             % Missile C.G. Point 
     XREF        =   0.809 ;                                                 % Missile Moment Reference Point
     
 %.. Actuator Parameters
