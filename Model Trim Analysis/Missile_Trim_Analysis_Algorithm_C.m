@@ -1,6 +1,6 @@
 %/////////////////////////////////////////////////////////////////////////%
 %                                                                         %
-%   - Name :Missile_Trim_Analysis_Algorithm_B.m                                          %
+%   - Name :Missile_Trim_Analysis_Algorithm_C.m                                          %
 %                                                                         %
 %                                                                         %
 %/////////////////////////////////////////////////////////////////////////%
@@ -17,11 +17,12 @@ Missile_Data;
 
 %% Operating Codintions
 
-global      h_trim  V_speed_trim    mach_trim
+global      h_trim  V_speed_trim    mach_trim  altitide
 
 h_trim = 0.0;
 V_speed_trim = 0.0;
 mach_trim = 0.0;
+altitide = 0.0;
 
 %% Constraints
 
@@ -56,11 +57,11 @@ SC = 0.0;
 % disp('///////////////////////////////////////////////')
 % names{:}
 
-%% Part B Trimming
+%% Part C Trimming
 % =================================================================== %
 % Operating Conidtion:
-% Mach number = [0.3 0.4 0.6 0.7]
-% Altitude = 0 meter
+% Mach number = 0.7
+% Altitude = [0.0 1.0 2.0 3.0 4.0] KM
 % =================================================================== %
 
 %.. Clear reused variables and arrays
@@ -76,16 +77,16 @@ mach_trim_matrix = [];
 h_trim_matrix = [];
 
 %.. Setting Operating Codintions for Part B
-mach_trim = [0.3 0.4 0.6 0.7];
-h_trim = 0.0;
-fileID = fopen('Part-B-Trim-Conditions.txt', 'w');
-for i=1:length(mach_trim)
+mach_trim = 0.7;
+h_trim = [0.0 1000.0 2000.0 3000.0 4000.0];
+fileID = fopen('Part-C-Trim-Conditions.txt', 'w');
+for i=1:length(h_trim)
 
     %.. Clear reused variables and arrays
     X0 = [];
     U0 = [];
-
-    V_speed_trim = mach_trim(i) * interp1(Tbl_ALT,Tbl_SOS, h_trim);
+    altitide = h_trim(i);
+    V_speed_trim = mach_trim * interp1(Tbl_ALT,Tbl_SOS, altitide);
 
     %.. Initial Guess of Trim States and Inputs
 
@@ -114,44 +115,44 @@ for i=1:length(mach_trim)
     xd_trim
 
     %.. Log the Trim Conditions to a Text File
-    log_trim_conditions_iterative(fileID, x_trim, u_trim, y_trim, mach_trim(i), h_trim);
+    log_trim_conditions_iterative(fileID, x_trim, u_trim, y_trim, mach_trim, h_trim(i));
 
     % Safe and Add triming data to matrix
     x_trim_matrix = [x_trim_matrix x_trim];
     u_trim_matrix = [u_trim_matrix u_trim];
     y_trim_matrix = [y_trim_matrix y_trim];
     xd_trim_matrix = [xd_trim_matrix xd_trim];
-    mach_trim_matrix = [mach_trim_matrix mach_trim(i)];
-    h_trim_matrix = [h_trim_matrix h_trim];
+    mach_trim_matrix = [mach_trim_matrix mach_trim];
+    h_trim_matrix = [h_trim_matrix altitide];
 
 end
 %.. Save Solution into MAT files
-save('Trim_Conditions_b.mat', 'x_trim_matrix', 'u_trim_matrix', 'y_trim_matrix', 'xd_trim_matrix', 'mach_trim_matrix', 'h_trim_matrix')
+save('Trim_Conditions_c.mat', 'x_trim_matrix', 'u_trim_matrix', 'y_trim_matrix', 'xd_trim_matrix', 'mach_trim_matrix', 'h_trim_matrix')
 
 %% Analysis
 tiledlayout(3,1)
-% Plot Trim Angle-of-Attack against Mach Number
+% Plot Trim Angle-of-Attack against Altitude
 trim_angle_of_attack_arr = y_trim_matrix(10,:);
 nexttile
-plot(mach_trim_matrix, trim_angle_of_attack_arr, '-r');
-title('Trim Angle-of-Attack against Mach Number');
-xlabel('Mach Number');
+plot(h_trim_matrix, trim_angle_of_attack_arr, '-r');
+title('Trim Angle-of-Attack against Altitude');
+xlabel('Altitude (m)');
 ylabel('Angle-of-attack (rad)');
 
-% Plot Trim pitch control fin deflection against Mach Number
+% Plot Trim pitch control fin deflection against  Altitude
 trim_elevator_deflection_arr = u_trim_matrix(2,:);
 nexttile
-plot(mach_trim_matrix, trim_elevator_deflection_arr, '-g');
-title('Trim Pitch Control Fin Deflection against Mach Number');
-xlabel('Mach Number');
+plot(h_trim_matrix, trim_elevator_deflection_arr, '-g');
+title('Trim Pitch Control Fin Deflection against Altitude');
+xlabel('Altitude (m)');
 ylabel(' Pitch control fin deflection (rad)');
 
-% Plot Trim Thrust against Mach Number
+% Plot Trim Thrust against  Altituder
 trim_thrust_arr = u_trim_matrix(1,:);
 nexttile
-plot(mach_trim_matrix,trim_thrust_arr, '-b');
-title('Trim Thrust against Mach Number');
-xlabel('Mach Number');
+plot(h_trim_matrix,trim_thrust_arr, '-b');
+title('Trim Thrust against Altitude');
+xlabel('Altitude (m)');
 ylabel('Trim thrust (N)');
 
 
