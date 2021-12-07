@@ -1,0 +1,24 @@
+
+===========================================           Trim Flight Conditions          ===========================================
+ Mach Number = 0.70 
+ Altitude = 0.00    
+
+===========================================           Trim States and Inputs         ===========================================
+ U      = 238.1547 m/s   
+  V      = 0.0000 m/s   
+  W      = 3.9571 m/s   
+  P      = 0.0000 deg/s 
+  R      = -0.0000 deg/s 
+  Q      = -0.0000 deg/s 
+  PHI    = -0.0000 deg 
+  THETA    = 0.9519 deg
+  PSI    = 0.0000 deg
+  ALPHA    = 0.9519 deg 
+  BETA    = 0.0000 deg 
+  V_air_speed    = 238.1876 m/s 
+ 
+Thrust  = 216.0968 N 
+ Elevator = -1.4886 N 
+ Aileron  = 0.0000 N 
+ Rudder  = 0.0000 N 
+ 

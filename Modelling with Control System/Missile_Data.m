@@ -53,7 +53,7 @@
     Wn_Act      =   25.0 * 2 * pi ;                                         % Natural Frequency         (rad) 
     Zeta_Act    =   0.707 ;                                                 % Damping Ratio             
     
-%.. Control Gains
+%.. Optimized Control Gains
 
     K_phi       =   20.0 ; 
     K_p         =   0.01 ; 
@@ -61,6 +61,14 @@
     K_A         =   0.15 ;
     Omega_i     =   -0.83 ; 
     K_R         =   0.0254 ;
+
+% %.. Original Control Gains
+%     K_phi       =   20.0 ; 
+%     K_p         =   0.01 ; 
+%     K_DC        =   0.8443 ; 
+%     K_A         =   0.0270 ;
+%     Omega_i     =   -6.5208 ; 
+%     K_R         =   0.0777 ; 
     
 %.. Missile Aerodynamics Data 
 

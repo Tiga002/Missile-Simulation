@@ -1,0 +1,92 @@
+===========================================           Trim Flight Conditions          ===========================================
+ Mach Number = 0.30 
+ Altitude = 0.00    
+
+===========================================           Trim States and Inputs         ===========================================
+ U      = 101.4481 m/s   
+  V      = 0.0000 m/s   
+  W      = 11.3446 m/s   
+  P      = 0.0000 deg/s 
+  R      = -0.0000 deg/s 
+  Q      = 0.0000 deg/s 
+  PHI    = -0.0000 deg   
+  THETA    = 6.3807 deg 
+  PSI    = -0.0000 deg   
+  ALPHA    = 6.3807 deg 
+  BETA    = 0.0000 deg 
+  V_air_speed    = 102.0804 m/s 
+ 
+Thrust  = 87.9582 N 
+ Elevator = -9.8236 deg 
+ Aileron  = 0.0000 deg 
+ Rudder  = 0.0000 deg 
+ 
+===========================================           Trim Flight Conditions          ===========================================
+ Mach Number = 0.40 
+ Altitude = 0.00    
+
+===========================================           Trim States and Inputs         ===========================================
+ U      = 135.8432 m/s   
+  V      = 0.0000 m/s   
+  W      = 8.4735 m/s   
+  P      = -0.0000 deg/s 
+  R      = 0.0000 deg/s 
+  Q      = 0.0000 deg/s 
+  PHI    = 0.0000 deg   
+  THETA    = 3.5693 deg 
+  PSI    = -0.0000 deg   
+  ALPHA    = 3.5693 deg 
+  BETA    = 0.0000 deg 
+  V_air_speed    = 136.1072 m/s 
+ 
+Thrust  = 97.5482 N 
+ Elevator = -5.5500 deg 
+ Aileron  = 0.0000 deg 
+ Rudder  = 0.0000 deg 
+ 
+===========================================           Trim Flight Conditions          ===========================================
+ Mach Number = 0.60 
+ Altitude = 0.00    
+
+===========================================           Trim States and Inputs         ===========================================
+ U      = 204.0948 m/s   
+  V      = -0.0000 m/s   
+  W      = 5.1910 m/s   
+  P      = -0.0000 deg/s 
+  R      = 0.0000 deg/s 
+  Q      = 0.0000 deg/s 
+  PHI    = -0.0000 deg   
+  THETA    = 1.4570 deg 
+  PSI    = -0.0000 deg   
+  ALPHA    = 1.4570 deg 
+  BETA    = -0.0000 deg 
+  V_air_speed    = 204.1608 m/s 
+ 
+Thrust  = 163.4150 N 
+ Elevator = -2.2769 deg 
+ Aileron  = -0.0000 deg 
+ Rudder  = -0.0000 deg 
+ 
+===========================================           Trim Flight Conditions          ===========================================
+ Mach Number = 0.70 
+ Altitude = 0.00    
+
+===========================================           Trim States and Inputs         ===========================================
+ U      = 238.1547 m/s   
+  V      = 0.0000 m/s   
+  W      = 3.9571 m/s   
+  P      = 0.0000 deg/s 
+  R      = -0.0000 deg/s 
+  Q      = -0.0000 deg/s 
+  PHI    = -0.0000 deg   
+  THETA    = 0.9519 deg 
+  PSI    = 0.0000 deg   
+  ALPHA    = 0.9519 deg 
+  BETA    = 0.0000 deg 
+  V_air_speed    = 238.1876 m/s 
+ 
+Thrust  = 216.0968 N 
+ Elevator = -1.4886 deg 
+ Aileron  = 0.0000 deg 
+ Rudder  = 0.0000 deg 
+ 
